@@ -1,5 +1,5 @@
 import test from 'ava';
-const m = require('.');
+import m from '.';
 
 test('Err: input <number>', t => {
   const err = t.throws(() => {
