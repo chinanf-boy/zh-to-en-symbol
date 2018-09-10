@@ -46,7 +46,7 @@ const reg = iStr => reg1.test(iStr) || reg2(iStr);
  * @param {Array<String>|String} data
  * @returns {Array<String>|String}
  */
-exports = module.exports = function fixEntoZh(data) {
+exports = module.exports = function fixZhtoEn(data) {
   if (isArray(data) && isString(data[0])) {
     data = data.map(x => {
       x = x.trim();

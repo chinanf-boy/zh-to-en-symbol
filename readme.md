@@ -2,8 +2,6 @@
 
 「 fix Zh symbol to En symbol 」
 
-[中文](./readme.md) | ~~[english](./readme.en.md)~~
-
 ## Install
 
 ```
@@ -17,24 +15,31 @@ yarn add zh-to-en-symbol
 ## Usage
 
 ```js
-const zhToEnSymbol = require('zh-to-en-symbol');
+const fixZhtoEn = require('zh-to-en-symbol');
 
-zhToEnSymbol('unicorns');
-//=> 'unicorns & rainbows'
+let result = fixZhtoEn("你好阿baby'‘～｀！＠“＃＄＾");
+//"你好阿baby''~`!@\"#$^"
 ```
 
 ## API
 
-### zhToEnSymbol(input, [options])
+### zhToEnSymbol(string): newStr
 
-#### input
+#### string
 
-| name: | input        |
-| ----- | ------------ |
-| Type: | `string`     |
-| Desc: | Lorem ipsum. |
+| name: | string           |
+| ----- | ---------------- |
+| Type: | `string`         |
+| Desc: | zh symbol string |
 
-#### options
+#### newStr
+
+| name: | newStr           |
+| ----- | ---------------- |
+| Type: | `string`         |
+| Desc: | en symbol string |
+
+<!-- #### options
 
 ##### foo
 
@@ -42,7 +47,15 @@ zhToEnSymbol('unicorns');
 | -------- | ------------ |
 | Type:    | `boolean`    |
 | Default: | `false`      |
-| Desc:    | Lorem ipsum. |
+| Desc:    | Lorem ipsum. | -->
+
+## concat
+
+- [emoji-str-position](https://github.com/chinanf-boy/emoji-str-position#data) emoji in str position
+
+## Use by
+
+- [translate-mds](https://github.com/chinanf-boy/translate-mds) translate you md files
 
 ## License
 
