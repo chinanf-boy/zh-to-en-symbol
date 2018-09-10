@@ -52,10 +52,9 @@
     ""
   ],
   "dependencies": {
-    "emoji-regex": "^7.0.1",
+    "emoji-str-position": "^1.0.0",
     "is-array": "^1.0.1",
-    "is-string": "^1.0.4",
-    "lodash.toarray": "^4.4.0"
+    "is-string": "^1.0.4"
   },
   "devDependencies": {
     "ava": "^0.25.0",
