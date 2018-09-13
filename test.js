@@ -14,6 +14,18 @@ test("string 你好阿baby'‘～｀！＠“＃＄＾", t => {
   t.is(result, "你好阿baby''~`!@\"#$^");
 });
 
+test('string .....', t => {
+  let result = m('......');
+
+  t.is(result, `......`);
+});
+
+test('string ` - `', t => {
+  let result = m(' - ');
+
+  t.is(result, ` - `);
+});
+
 test('string 「〔', t => {
   let result = m('「〔');
 

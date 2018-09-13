@@ -9,7 +9,7 @@ const Store = {
   '‘': "'",
   '：': ':',
   '/': '/',
-  ℴ: '-',
+  // `ℴ`: '-',
   '”': '"',
   '。': '.',
   '|': '|',
@@ -49,7 +49,6 @@ const reg = iStr => reg1.test(iStr) || reg2(iStr);
 exports = module.exports = function fixZhtoEn(data) {
   if (isArray(data) && isString(data[0])) {
     data = data.map(x => {
-      x = x.trim();
       return halfStr(x);
     });
 
@@ -57,7 +56,6 @@ exports = module.exports = function fixZhtoEn(data) {
   }
 
   if (isString(data)) {
-    data = data.trim();
     return halfStr(data);
   }
 
