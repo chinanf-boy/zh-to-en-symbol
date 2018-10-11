@@ -9,47 +9,53 @@ test('Err: input <number>', t => {
 });
 
 test("string 你好阿baby'‘～｀！＠“＃＄＾", t => {
-  let result = m("你好阿baby'‘～｀！＠“＃＄＾");
+  const result = m("你好阿baby'‘～｀！＠“＃＄＾");
 
   t.is(result, "你好阿baby''~`!@\"#$^");
 });
 
+test('string http / asd / sdf', t => {
+  const result = m('http / asd / sdf');
+
+  t.is(result, 'http/asd/sdf');
+});
+
 test('string .....', t => {
-  let result = m('......');
+  const result = m('......');
 
   t.is(result, `......`);
 });
 
 test('string ` - `', t => {
-  let result = m(' - ');
+  const result = m(' - ');
 
   t.is(result, ` - `);
 });
 
 test('string 「〔', t => {
-  let result = m('「〔');
+  const result = m('「〔');
 
   t.is(result, `「〔`);
 });
 
 test('string ||', t => {
-  let result = m(`||`);
+  const result = m(`||`);
 
   t.is(result, `||`);
 });
 
 test('string Array', t => {
-  let result = m([`你好阿baby'‘～｀`, `！＠“＃＄＾`]);
+  const result = m([`你好阿baby'‘～｀`, `！＠“＃＄＾`]);
   t.deepEqual(result, [`你好阿baby''~\``, `!@"#$^`]);
 });
 
 test('string emoji 😊', t => {
-  let result = m('👪⌚😊');
+  const result = m('👪⌚😊');
 
   t.is(result, '👪⌚😊');
 });
 
 test('string Array emoji ❤️⛱️', t => {
-  let result = m([`你好阿baby❤️'‘～｀`, `！＠“⛱️＃＄＾`]);
+  const result = m([`你好阿baby❤️'‘～｀`, `！＠“⛱️＃＄＾`]);
   t.deepEqual(result, [`你好阿baby❤️''~\``, `!@"⛱️#$^`]);
 });
