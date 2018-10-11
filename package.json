@@ -1,6 +1,6 @@
 {
   "name": "zh-to-en-symbol",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "fix Zh symbol to En symbol",
   "license": "MIT",
   "main": "dist/zh-to-en-symbol.js",
